@@ -37,3 +37,7 @@ Define a `LineSegment` class. Its constructor should take two pairs of coordinat
 
 Augment the class with the following method...
 * `length` – calculates the length of the (x1, y1) --> (x2, y2) [line segment](http://en.wikipedia.org/wiki/Pythagorean_theorem).
+
+## Shape
+
+Define a `Shape` class. It should have the number of sides and a color associated with it. Make the other classes inherit from it.
