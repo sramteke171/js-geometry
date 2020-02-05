@@ -21,8 +21,6 @@ Augment the class with the following methods...
 
 Create a few rectangles with different lengths and widths.
 
-**Bonus**: Test your outcomes using [Jasmine](https://github.com/ga-wdi-lessons/js-jasmine)!
-
 
 ## Triangle
 
@@ -46,8 +44,6 @@ Augment the class with the following methods...
 > Hint: Obtuse triangles have one side that is longer in length than both of the other two sides.
 
 Create a few rectangles with different lengths and widths.
-
-**Bonus**: Test your outcomes using [Jasmine](https://github.com/ga-wdi-lessons/js-jasmine)!
 
 
 ## LineSegment
