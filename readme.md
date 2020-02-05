@@ -1,6 +1,6 @@
 # Geometry
 
-> **NOTE:** You can ignore the `module is not defined` error you see in the console when opening `index.html` in the browser. You should still be able to test your code.
+> **NOTE:** You can ignore the `module is not defined` error you see in the console when opening `index.html` in the browser. You should still be able to test your code. Complete the following prompts within `geom.js`
 
 ## Rectangle
 
