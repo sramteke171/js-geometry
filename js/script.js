@@ -53,8 +53,91 @@ class Rectangle {
 
 let a = new Rectangle(2, 3);
 let b = new Rectangle(4, 5);
-console.log(a);
-console.log(b);
-console.log(a.isSquare(2, 2));
-a.area(2, 3);
-a.perimeter(2, 3);
+// console.log(a);
+// console.log(b);
+// console.log(a.isSquare(2, 2));
+// a.area(2, 3);
+// a.perimeter(2, 3);
+
+
+// Triangle
+// Declare a Triangle class.Where the constructor should take three sides-- sideA sideB and sideC-- as arguments.
+
+// The Triangle class should have the following methods...
+
+// isEquilateral - This method returns true if the triangle is equilateral, otherwise returns false.
+//     Hint: Equilateral triangles have sides of the same length.
+
+//         isIsosceles - This method returns true if the triangle is isosceles, otherwise returns false.
+//             Hint: Isosceles triangles have two equal sides.
+
+//                 area - This method returns the area of the Triangle.
+//                     Hint: A triangle has three sides represented by a, b and c, as well as a semi - perimeter, represented by s.s = (a + b + c) / 2
+// and Area is equal to the square root of s * (s - a) * (s - b) * (s - c).
+
+//     isObtuse - This method returns true if the triangle is obtuse, otherwise returns false.
+//         Instantiate 3 Triangles.each one with different values from each other.For each rectangle you instatiated, print the following messages:
+
+// The area of the Triangle is ____.
+
+// Add other messages to test your code 👍
+
+// 😉 commit
+
+class Triangle {
+    constructor(sideA, sideB, sideC) {
+        this.sideA = sideA;
+        this.sideB = sideB;
+        this.sideC = sideC;
+    }
+    isEquilateral(a1, b1, c1) {
+        if (a1 === b1 && a1 === c1) {
+            console.log(`triangle is equilateral cuz sides are same length  ${a1, b1, c1}`);
+            return "true";
+        } else {
+            console.log(`triangle NOT equilateral cuz sides are NOT same length  ${a1, b1, c1}`);
+            return "false";
+        }
+    }
+
+    isIsosceles(a1, b1, c1) {
+        if (a1 === b1 || a1 === c1 || b1 === c1) {
+            console.log(`triangle is isosceles cuz it has two sildes of same length  ${a1, b1, c1}`);
+            return "true";
+        } else {
+            console.log(`triangle NOT isosceles cuz, two sides are NOT having same length  ${a1, b1, c1}`);
+            return "false";
+        }
+    }
+
+
+    area(a1, b1, c1) {
+        let s = (a1 + b1 + c1) / 2;
+        let area = Math.sqrt(s * ((s - a1) * (s - b1) * (s - c1)));
+        console.log(`traingle perm(s) is ${s}`);
+        console.log(`traingle area is ${area}`);
+    }
+
+    isObtuse(angle) {
+        if (angle < 90) {
+            console.log("Acute angle");
+            return "Acute angle.";
+        }
+        if (angle === 90) {
+            console.log("Right angle");
+            return "Right angle.";
+        }
+        if (angle > 90 && angle < 180) {
+            console.log("Obtuse angle");
+            return "Obtuse angle.";
+        }
+        console.log("Straight angle");
+        return "Straight angle.";
+    }
+}
+
+inst = new Triangle(2, 3, 4);
+inst.area(2, 3, 4);
+inst.isObtuse(100);
+inst.isEquilateral(5, 5, 5);
+inst.isIsosceles(6, 6, 9);
