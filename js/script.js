@@ -23,36 +23,36 @@
 
 // 😉 commit
 
-class Rectangle {
-    constructor(length, width) {
-        this.length = length;
-        this.width = width;
-    }
-    isSquare(l, w) {
-        if (l === w) {
-            console.log("Rectangle is square - true");
-            return "true";
-        } else {
-            console.log("rectangle is not square - false");
-            return "false";
-        }
+// class Rectangle {
+//     constructor(length, width) {
+//         this.length = length;
+//         this.width = width;
+//     }
+//     isSquare(l, w) {
+//         if (l === w) {
+//             console.log("Rectangle is square - true");
+//             return "true";
+//         } else {
+//             console.log("rectangle is not square - false");
+//             return "false";
+//         }
 
-    }
-    area(l, w) {
-        let area = l * w;
-        console.log("area of the rectangle is  " + area);
+//     }
+//     area(l, w) {
+//         let area = l * w;
+//         console.log("area of the rectangle is  " + area);
 
-    }
-    perimeter(l, w) {
-        let perimeter = 2 * (l + w);
-        console.log("The perimeter of the Rectangle is  " + perimeter);
+//     }
+//     perimeter(l, w) {
+//         let perimeter = 2 * (l + w);
+//         console.log("The perimeter of the Rectangle is  " + perimeter);
 
-    }
+//     }
 
-}
+// }
 
-let a = new Rectangle(2, 3);
-let b = new Rectangle(4, 5);
+// let a = new Rectangle(2, 3);
+// let b = new Rectangle(4, 5);
 // console.log(a);
 // console.log(b);
 // console.log(a.isSquare(2, 2));
@@ -84,14 +84,124 @@ let b = new Rectangle(4, 5);
 
 // 😉 commit
 
-class Triangle {
+// class Triangle {
+//     constructor(sideA, sideB, sideC) {
+//         this.sideA = sideA;
+//         this.sideB = sideB;
+//         this.sideC = sideC;
+//     }
+//     isEquilateral(a1, b1, c1) {
+//         if (a1 === b1 && a1 === c1) {
+//             console.log(`triangle is equilateral cuz sides are same length  ${a1, b1, c1}`);
+//             return "true";
+//         } else {
+//             console.log(`triangle NOT equilateral cuz sides are NOT same length  ${a1, b1, c1}`);
+//             return "false";
+//         }
+//     }
+
+//     isIsosceles(a1, b1, c1) {
+//         if (a1 === b1 || a1 === c1 || b1 === c1) {
+//             console.log(`triangle is isosceles cuz it has two sildes of same length  ${a1, b1, c1}`);
+//             return "true";
+//         } else {
+//             console.log(`triangle NOT isosceles cuz, two sides are NOT having same length  ${a1, b1, c1}`);
+//             return "false";
+//         }
+//     }
+
+
+//     area(a1, b1, c1) {
+//         let s = (a1 + b1 + c1) / 2;
+//         let area = Math.sqrt(s * ((s - a1) * (s - b1) * (s - c1)));
+//         console.log(`traingle perm(s) is ${s}`);
+//         console.log(`traingle area is ${area}`);
+//     }
+
+//     isObtuse(angle) {
+//         if (angle < 90) {
+//             console.log("Acute angle");
+//             return "Acute angle.";
+//         }
+//         if (angle === 90) {
+//             console.log("Right angle");
+//             return "Right angle.";
+//         }
+//         if (angle > 90 && angle < 180) {
+//             console.log("Obtuse angle");
+//             return "Obtuse angle.";
+//         }
+//         console.log("Straight angle");
+//         return "Straight angle.";
+//     }
+// }
+
+// inst = new Triangle(2, 3, 4);
+// inst.area(2, 3, 4);
+// inst.isObtuse(100);
+// inst.isEquilateral(5, 5, 5);
+// inst.isIsosceles(6, 6, 9);
+
+
+// Shape
+// Define a Shape class. It should have the number of sides and a color associated with it. Make the other classes inherit from it.
+
+// 😉 commit
+
+
+class Shape {
     constructor(sideA, sideB, sideC) {
         this.sideA = sideA;
         this.sideB = sideB;
         this.sideC = sideC;
+        this.color = "blue";
+    }
+}
+
+
+class Rectangle extends Shape {
+    constructor(sideA, sideB, sideC, length, width) {
+        super(sideA, sideB, sideC)
+        this.length = length;
+        this.width = width;
+    }
+    isSquare(l, w) {
+        if (l === w) {
+            console.log("Rectangle is square - true");
+            return "true";
+        } else {
+            console.log("rectangle is not square - false");
+            return "false";
+        }
+
+    }
+    area(l, w) {
+        let area = l * w;
+        console.log("area of the rectangle is  " + area);
+
+    }
+    perimeter(l, w) {
+        let perimeter = 2 * (l + w);
+        console.log("The perimeter of the Rectangle is  " + perimeter);
+
+    }
+
+}
+
+let a = new Rectangle(2, 3);
+console.log(a.color);
+
+
+class Triangle extends Shape {
+    constructor(sideA, sideB, sideC, length, width, third) {
+        super(sideA, sideB, sideC)
+        this.length = length;
+        this.width = width;
+        this.third = third;
     }
     isEquilateral(a1, b1, c1) {
         if (a1 === b1 && a1 === c1) {
+            //if (a1 === b1 === a1 === c1) {
             console.log(`triangle is equilateral cuz sides are same length  ${a1, b1, c1}`);
             return "true";
         } else {
@@ -136,8 +246,11 @@ class Triangle {
     }
 }
 
-inst = new Triangle(2, 3, 4);
-inst.area(2, 3, 4);
-inst.isObtuse(100);
-inst.isEquilateral(5, 5, 5);
-inst.isIsosceles(6, 6, 9);
+let b = new Triangle(4, 5, 6);
+b.color = "Green" //changing color from child class
+console.log(b.color);
+
+
+// Bonus
+// Feel free to fork and clone and work your way through the following repo:
+// Gladiator
