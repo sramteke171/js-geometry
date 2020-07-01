@@ -85,3 +85,9 @@ Augment the class with the following method...
 ## Shape
 
 Define a `Shape` class. It should have the number of sides and a color associated with it. Make the other classes inherit from it.
+
+## Bonus 
+
+Feel free to fork and clone and work your way through the following repo: 
+
+[Gladiator](https://git.generalassemb.ly/jdr-0622/js-gladiator/blob/master/readme.md)
