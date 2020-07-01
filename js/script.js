@@ -52,7 +52,9 @@ class Rectangle {
 }
 
 let a = new Rectangle(2, 3);
+let b = new Rectangle(4, 5);
 console.log(a);
+console.log(b);
 console.log(a.isSquare(2, 2));
 a.area(2, 3);
 a.perimeter(2, 3);
