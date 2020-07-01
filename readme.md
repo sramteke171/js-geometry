@@ -21,6 +21,8 @@ Let's practice your's object-oriented programming skills.
 1.  Go to your `script.js` file and add a console.log, i.e: `console.log("script file is linked")`.
 1.  Open the file `index.html` in your brownser, and open your console (**command** + **option** + **i**)
 1.  You should be able to see your message in the console.log, if you are not seeing your message go to step 5 and review your steps from there. 
+1.  Submit your work by creating a new pull request.
+
 ### :heavy_exclamation_mark: Don't forget to commit your progress
 
 ## Rectangle
@@ -39,7 +41,6 @@ The Rectangle class should have the following methods...
 
 Instantiate 2 rectangles with different lengths and widths.
 For each rectangle you instatiated, print the following messages:
-
 **The area of the Rectangle is \____**.
 
 **The perimeter of the Rectangle is \____**.
@@ -48,43 +49,38 @@ For each rectangle you instatiated, print the following messages:
 
 **This Rectangle is NOT a square!** (if the return of method **`isSquare`** is false)
 
-
+#### :wink: commit
 ## Triangle
 
-Declare a **`Triangle`** class. Its constructor should take three sides -- `sideA` `sideB` and `sideC` -- as arguments.
+Declare a **`Triangle`** class. Where the constructor should take three sides -- `sideA` `sideB` and `sideC` -- as arguments.
 
-Augment the class with the following methods...
-* `isEquilateral` - returns true [if the triangle is equilateral](http://en.wikipedia.org/wiki/Equilateral_triangle).
-
+The Triangle class should have the following methods...
+* **`isEquilateral`** - This method returns **`true`** if the triangle is equilateral, otherwise returns **`false`**.
 > Hint: Equilateral triangles have sides of the same length.
 
-* `isIsosceles` - return true [if the triangle is isosceles](http://en.wikipedia.org/wiki/Isosceles_triangle#By_relative_lengths_of_sides).
-
+* **`isIsosceles`** - This method returns **`true`** if the triangle is isosceles, otherwise returns **`false`**.
 > Hint: Isosceles triangles have two equal sides.
 
-* `area` - calculates the [area of the Triangle](http://en.wikipedia.org/wiki/Heron%27s_formula).
-
+* **`area`** - This method returns the area of the Triangle.
 > Hint: A triangle has three sides represented by `a`, `b` and `c`, as well as a semi-perimeter, represented by `s`. `s = (a + b + c)/2` and Area is equal to the square root of `s * (s - a) * (s - b) * (s - c)`.
 
-* `isObtuse` - returns true [if the triangle is obtuse](http://en.wikipedia.org/wiki/Isosceles_triangle#By_internal_angles).
-
-> Hint: Obtuse triangles have one side that is longer in length than both of the other two sides.
-
-Create a few rectangles with different lengths and widths.
+* **`isObtuse`** - This method returns **`true`** if the triangle is obtuse, otherwise returns **`false`**.
 
 
-## LineSegment
+Instantiate 3 Triangles. each one with different values from each other.
+For each rectangle you instatiated, print the following messages:
 
-Declare a `LineSegment` class. Its constructor should take two pairs of coordinates -- `x1` `y1` `x2` `y2` -- as arguments.
+**The area of the Triangle is \____**.
 
-Augment the class with the following method...
-* `length` – calculates the length of the (x1, y1) --> (x2, y2) [line segment](http://en.wikipedia.org/wiki/Pythagorean_theorem).
+Add other messages to test your code :+1:
 
-> Hint: Calculate the line segment by taking the square root of `((x2 - x1) ** 2) + ((y2 - y1) ** 2)`.
+#### :wink: commit
 
 ## Shape
 
 Define a `Shape` class. It should have the number of sides and a color associated with it. Make the other classes inherit from it.
+
+#### :wink: commit
 
 ## Bonus 
 
